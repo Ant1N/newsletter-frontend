@@ -30,7 +30,7 @@ registerBtn.addEventListener('click', () => {
     email: mailInput.value,
     password: passwordInput.value,
   };
-  fetch('http://localhost:3000/user', {
+  fetch(apiUrl + '/user', {
     method: 'POST',
     headers: {
       'Content-type': 'application/json',
@@ -50,7 +50,7 @@ loginBtn.addEventListener('click', () => {
     email: mailInput.value,
     password: passwordInput.value,
   };
-  fetch('http://localhost:3000/login', {
+  fetch(apiUrl + '/login', {
     method: 'POST',
     headers: {
       'Content-type': 'application/json',
@@ -71,7 +71,7 @@ loginBtn.addEventListener('click', () => {
 //optoutcheckbox button
 
 logOutBtn.addEventListener('click', () => {
-  fetch('http://localhost:3000/subscription', {
+  fetch(apiUrl + '/subscription', {
     method: 'POST',
     headers: {
       'Content-type': 'application/json',
