@@ -78,12 +78,12 @@ logOutBtn.addEventListener('click', () => {
     },
     body: JSON.stringify({
       _id: localStorage.getItem('id'),
-      subscribed: optoutCheckbox.checked,
+      subscribed: optoutCheckbox.checked ? false : true,
     }),
   })
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
+      alert(data);
     });
   localStorage.removeItem('id');
   location.reload();
